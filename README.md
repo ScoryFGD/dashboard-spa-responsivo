@@ -1,6 +1,6 @@
 # Dashboard SPA Responsivo para Monitoreo Cloud
 
-Proyecto desarrollado como una aplicación de página única (**SPA**) responsiva para el monitoreo de servidores y recursos en la nube, utilizando tecnologías web estándar (*HTML5, CSS3 y JavaScript vanilla*).
+Proyecto desarrollado como una aplicación de página única (**SPA**) responsiva para el monitoreo de servidores y recursos en la nube, utilizando tecnologías web estándar (HTML, CSS y JavaScript vanilla).
 
 ## 🚀 Características Principales
 - **Diseño Responsivo (Mobile-First):** Adaptable de forma fluida a dispositivos móviles y pantallas de escritorio mediante CSS Grid y Flexbox.
