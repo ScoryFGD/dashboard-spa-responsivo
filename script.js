@@ -98,4 +98,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
     }, 2500);
   }
+
+  // 4. Control Manual del Modo Oscuro / Claro
+  const themeToggle = document.getElementById('themeToggle');
+  const htmlRoot = document.documentElement;
+
+  if (themeToggle) {
+    themeToggle.addEventListener('click', () => {
+      htmlRoot.classList.toggle('dark-mode');
+      
+      // Cambiar icono según el modo actual
+      if (htmlRoot.classList.contains('dark-mode')) {
+        themeToggle.textContent = '☀️'; // Sol para volver a modo claro
+      } else {
+        themeToggle.textContent = '🌙'; // Luna para cambiar a modo oscuro
+      }
+    });
+  }
 });

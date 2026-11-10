@@ -1,3 +1,29 @@
+/* 1. Definición de Variables CSS (Modo Claro por defecto) */
+:root {
+  --bg-body: #f4f6f9;
+  --bg-sidebar: #1e293b;
+  --text-sidebar: #94a3b8;
+  --text-sidebar-hover: #ffffff;
+  --bg-header: #ffffff;
+  --text-header: #0f172a;
+  --bg-card: #ffffff;
+  --text-main: #334155;
+  --border-color: #e2e8f0;
+}
+
+/* Modo Oscuro forzado mediante la clase .dark-mode */
+html.dark-mode {
+  --bg-body: #0f172a;
+  --bg-sidebar: #020617;
+  --text-sidebar: #94a3b8;
+  --text-sidebar-hover: #ffffff;
+  --bg-header: #1e293b;
+  --text-header: #f8fafc;
+  --bg-card: #1e293b;
+  --text-main: #f1f5f9;
+  --border-color: #334155;
+}
+
 /* General */
 * {
   margin: 0;
@@ -7,7 +33,9 @@
 
 body {
   font-family: Arial, sans-serif;
-  background-color: #f4f6f9;
+  background-color: var(--bg-body);
+  color: var(--text-main);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* Sidebar (Oculta por defecto en móvil) */
@@ -17,9 +45,9 @@ body {
   left: -250px;
   width: 250px;
   height: 100vh;
-  background-color: #1e293b;
-  color: #fff;
-  transition: left 0.3s ease;
+  background-color: var(--bg-sidebar);
+  color: var(--text-sidebar);
+  transition: left 0.3s ease, background-color 0.3s ease;
   padding: 1.5rem;
   z-index: 1000;
 }
@@ -38,7 +66,7 @@ body {
 
 .sidebar-nav a {
   display: block;
-  color: #94a3b8;
+  color: var(--text-sidebar);
   text-decoration: none;
   padding: 0.75rem 0;
   transition: color 0.2s ease;
@@ -46,7 +74,7 @@ body {
 
 .sidebar-nav a.active,
 .sidebar-nav a:hover {
-  color: #fff;
+  color: var(--text-sidebar-hover);
   font-weight: bold;
 }
 
@@ -55,9 +83,11 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #ffffff;
+  background-color: var(--bg-header);
+  color: var(--text-header);
   padding: 1rem;
-  border-bottom: 1px solid #e2e8f0;
+  border-bottom: 1px solid var(--border-color);
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
 }
 
 .menu-toggle {
@@ -65,6 +95,12 @@ body {
   border: none;
   font-size: 1.5rem;
   cursor: pointer;
+  color: var(--text-header);
+}
+
+.user-profile {
+  color: var(--text-header);
+  font-weight: 500;
 }
 
 /* Manejo de Secciones SPA */
@@ -91,10 +127,13 @@ body {
 }
 
 .card, .chart-section {
-  background-color: #ffffff;
+  background-color: var(--bg-card);
+  color: var(--text-main);
   padding: 1.2rem;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  border: 1px solid var(--border-color);
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
 }
 
 .metric-value {

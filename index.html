@@ -27,7 +27,11 @@
     <header class="header">
       <button class="menu-toggle" id="menuToggle">&#9776;</button>
       <h1 id="pageTitle">Monitoreo - Inicio</h1>
-      <div class="user-profile">Admin</div>
+      <div class="header-right" style="display: flex; align-items: center; gap: 1rem;">
+        <!-- Botón para alternar el modo oscuro manualmente -->
+        <button id="themeToggle" class="theme-btn" title="Cambiar modo" style="background: none; border: none; font-size: 1.2rem; cursor: pointer; padding: 0.25rem;">🌙</button>
+        <div class="user-profile">Admin</div>
+      </div>
     </header>
 
     <!-- Contenido dinámico SPA -->
@@ -67,15 +71,15 @@
         <section class="card">
           <h2>Estado de Servidores Cloud</h2>
           <div class="server-list" style="margin-top: 1rem; display: flex; flex-direction: column; gap: 0.75rem;">
-            <div class="server-item" style="display: flex; justify-content: space-between; padding: 0.75rem; background: #f8fafc; border-radius: 6px;">
+            <div class="server-item" style="display: flex; justify-content: space-between; padding: 0.75rem; background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 6px;">
               <span><strong>US-East (Servidor Web 01)</strong></span>
               <span style="color: #16a34a; font-weight: bold;">● En línea</span>
             </div>
-            <div class="server-item" style="display: flex; justify-content: space-between; padding: 0.75rem; background: #f8fafc; border-radius: 6px;">
+            <div class="server-item" style="display: flex; justify-content: space-between; padding: 0.75rem; background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 6px;">
               <span><strong>US-West (Base de Datos)</strong></span>
               <span style="color: #16a34a; font-weight: bold;">● En línea</span>
             </div>
-            <div class="server-item" style="display: flex; justify-content: space-between; padding: 0.75rem; background: #f8fafc; border-radius: 6px;">
+            <div class="server-item" style="display: flex; justify-content: space-between; padding: 0.75rem; background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 6px;">
               <span><strong>EU-Central (Backup Storage)</strong></span>
               <span style="color: #ea580c; font-weight: bold;">● Mantenimiento</span>
             </div>
@@ -87,13 +91,13 @@
       <div id="section-metricas" class="spa-section">
         <section class="card">
           <h2>Métricas Históricas</h2>
-          <p style="margin-top: 0.5rem; color: #64748b;">Resumen general de peticiones y latencia media de la red.</p>
+          <p style="margin-top: 0.5rem; color: var(--text-sidebar);">Resumen general de peticiones y latencia media de la red.</p>
           <div class="metrics-grid" style="margin-top: 1rem;">
-            <div class="card" style="background: #f1f5f9;">
+            <div class="card" style="border: 1px solid var(--border-color);">
               <h3>Peticiones / seg</h3>
               <p class="metric-value" style="color: #0d9488;">1,240 req/s</p>
             </div>
-            <div class="card" style="background: #f1f5f9;">
+            <div class="card" style="border: 1px solid var(--border-color);">
               <h3>Latencia Promedio</h3>
               <p class="metric-value" style="color: #0d9488;">18 ms</p>
             </div>
