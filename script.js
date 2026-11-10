@@ -1,8 +1,11 @@
-// Seleccionar el botón y la sidebar
-const menuToggle = document.getElementById('menuToggle');
-const sidebar = document.getElementById('sidebar');
+// Esperar a que todo el HTML cargue antes de ejecutar el script
+document.addEventListener("DOMContentLoaded", () => {
+  const menuToggle = document.getElementById('menuToggle');
+  const sidebar = document.getElementById('sidebar');
 
-// Abrir o cerrar la sidebar al hacer clic en el botón
-menuToggle.addEventListener('click', () => {
-  sidebar.classList.toggle('active');
+  if (menuToggle && sidebar) {
+    menuToggle.addEventListener('click', () => {
+      sidebar.classList.toggle('active');
+    });
+  }
 });
