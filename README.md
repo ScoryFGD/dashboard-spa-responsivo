@@ -1,11 +1,3 @@
-# Dashboard SPA Responsivo - Práctica Integral
-
-Alumno: Jesús Antonio Maldonado Valle  
-Asignatura: Diseño de Interfaz Web  
-Institución: Instituto Tecnológico Superior de Guasave (TecNM)  
-
----
-
 ## Descripción del Proyecto
 Aplicación de Página Única (SPA) desarrollada con tecnologías nativas (HTML5, CSS3 y JavaScript ES6+) que simula un panel de control y monitoreo de infraestructura cloud en tiempo real.
 
