@@ -1,23 +1,24 @@
-# Dashboard SPA Responsivo para Monitoreo Cloud
+# Dashboard SPA Responsivo - Práctica Integral
 
-Proyecto desarrollado como una aplicación de página única (**SPA**) responsiva para el monitoreo de servidores y recursos en la nube, utilizando tecnologías web estándar (HTML, CSS y JavaScript vanilla).
+Alumno: Jesús Antonio Maldonado Valle  
+Asignatura: Diseño de Interfaz Web  
+Institución: Instituto Tecnológico Superior de Guasave (TecNM)  
 
-## 🚀 Características Principales
-- **Diseño Responsivo (Mobile-First):** Adaptable de forma fluida a dispositivos móviles y pantallas de escritorio mediante CSS Grid y Flexbox.
-- **Navegación SPA:** Sistema de vistas internas dinámicas (*Inicio, Servidores y Métricas*) integradas desde la barra lateral sin necesidad de recargar la página.
-- **Menú Hamburguesa Interactivo:** Barra lateral desplegable optimizada para dispositivos móviles con control de eventos táctiles y de cierre automático.
-- **Monitoreo en Tiempo Real:** 
-  - Visualización gráfica interactiva de rendimiento de CPU integrada mediante **Chart.js**.
-  - Tarjetas con métricas simuladas en tiempo real (CPU y uso de RAM) con iconos representativos (💻 y 🧠).
-  - Listado de estado operativo de servidores cloud (*En línea* / *Mantenimiento*).
+---
 
-## 🛠️ Tecnologías Utilizadas
-- **HTML5:** Estructura semántica de componentes.
-- **CSS3:** Estilos personalizados, transiciones fluidas y diseño adaptable.
-- **JavaScript (ES6+):** Lógica del menú lateral, renderizado condicional de vistas SPA y actualización dinámica de datos.
-- **Chart.js:** Librería externa mediante CDN para el trazado de la gráfica de rendimiento.
+## Descripción del Proyecto
+Aplicación de Página Única (SPA) desarrollada con tecnologías nativas (HTML5, CSS3 y JavaScript ES6+) que simula un panel de control y monitoreo de infraestructura cloud en tiempo real.
 
-## 📂 Estructura del Repositorio
-- `index.html` - Contiene la estructura principal de la interfaz y las secciones SPA.
-- `styles.css` - Contiene los estilos visuales, reglas de diseño y *media queries*.
-- `script.js` - Controla la interactividad del menú, la navegación por pestañas y la simulación de datos en tiempo real.
+## Características Principales
+- Enfoque Mobile-First: Maquetación responsiva utilizando CSS Grid (para tarjetas y métricas) y CSS Flexbox (para la barra superior, alineaciones y componentes).
+- Navegación SPA: Transición fluida entre las secciones de Inicio, Servidores y Métricas sin recargar la página.
+- Modo Oscuro Nativo: Implementación mediante variables CSS (:root y .dark-mode) con un botón interactivo selector de temas.
+- Gráfica Dinámica: Integración de Chart.js mediante CDN con actualización de datos en tiempo real mediante temporizadores (setInterval).
+- Menú Hamburguesa: Desplegable táctil optimizado para dispositivos móviles.
+
+## Estructura de Entregables
+- El código fuente modular (index.html, styles.css, script.js).
+- El documento completo del Reporte Técnico adjunto en el repositorio.
+- El enlace público al prototipo interactivo en Figma.
+
+Enlace al Prototipo en Figma: https://www.figma.com/design/0AGiVmgusXP3wfmbBmtUVL/Sin-t%C3%ADtulo?node-id=3-19&t=UW8HjWJSQ8SYSKGV-1
