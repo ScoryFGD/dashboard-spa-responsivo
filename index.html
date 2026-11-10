@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Cloud</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Menú lateral -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-logo">CloudDash</div>
+    <nav class="sidebar-nav">
+      <a href="#" class="active">Inicio</a>
+      <a href="#">Servidores</a>
+      <a href="#">Métricas</a>
+    </nav>
+  </aside>
+
+  <!-- Contenedor principal -->
+  <div class="main-wrapper">
+    
+    <!-- Barra superior -->
+    <header class="header">
+      <button class="menu-toggle" id="menuToggle">&#9776;</button>
+      <h1>Monitoreo</h1>
+      <div class="user-profile">Admin</div>
+    </header>
+
+    <!-- Contenido -->
+    <main class="main-content">
+      
+      <!-- Tarjetas de Métricas con iconos -->
+      <section class="metrics-grid">
+        <div class="card">
+          <div style="display: flex; align-items: center; gap: 0.5rem;">
+            <span>💻</span>
+            <h3>CPU</h3>
+          </div>
+          <p class="metric-value">42%</p>
+        </div>
+        <div class="card">
+          <div style="display: flex; align-items: center; gap: 0.5rem;">
+            <span>🧠</span>
+            <h3>RAM</h3>
+          </div>
+          <p class="metric-value">6.8 GB</p>
+        </div>
+      </section>
+
+      <!-- Sección de Gráfica -->
+      <section class="chart-section">
+        <h2>Rendimiento</h2>
+        <div class="chart-placeholder">[ Gráfica ]</div>
+      </section>
+
+    </main>
+
+  </div>
+
+  <!-- JavaScript al final para dar interactividad -->
+  <script src="script.js"></script>
+</body>
+</html>
