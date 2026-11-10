@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dashboard Cloud</title>
   <link rel="stylesheet" href="styles.css">
+  <!-- Carga de Chart.js desde CDN para renderizar la gráfica -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
 
@@ -12,9 +14,9 @@
   <aside class="sidebar" id="sidebar">
     <div class="sidebar-logo">CloudDash</div>
     <nav class="sidebar-nav">
-      <a href="#" class="active">Inicio</a>
-      <a href="#">Servidores</a>
-      <a href="#">Métricas</a>
+      <a href="#" class="nav-link active" data-target="inicio">Inicio</a>
+      <a href="#" class="nav-link" data-target="servidores">Servidores</a>
+      <a href="#" class="nav-link" data-target="metricas">Métricas</a>
     </nav>
   </aside>
 
@@ -24,42 +26,85 @@
     <!-- Barra superior -->
     <header class="header">
       <button class="menu-toggle" id="menuToggle">&#9776;</button>
-      <h1>Monitoreo</h1>
+      <h1 id="pageTitle">Monitoreo - Inicio</h1>
       <div class="user-profile">Admin</div>
     </header>
 
-    <!-- Contenido -->
+    <!-- Contenido dinámico SPA -->
     <main class="main-content">
       
-      <!-- Tarjetas de Métricas con iconos -->
-      <section class="metrics-grid">
-        <div class="card">
-          <div style="display: flex; align-items: center; gap: 0.5rem;">
-            <span>💻</span>
-            <h3>CPU</h3>
+      <!-- SECCIÓN 1: INICIO -->
+      <div id="section-inicio" class="spa-section active">
+        <!-- Tarjetas de Métricas con iconos -->
+        <section class="metrics-grid">
+          <div class="card">
+            <div style="display: flex; align-items: center; gap: 0.5rem;">
+              <span>💻</span>
+              <h3>CPU</h3>
+            </div>
+            <p class="metric-value" id="cpuValue">42%</p>
           </div>
-          <p class="metric-value">42%</p>
-        </div>
-        <div class="card">
-          <div style="display: flex; align-items: center; gap: 0.5rem;">
-            <span>🧠</span>
-            <h3>RAM</h3>
+          <div class="card">
+            <div style="display: flex; align-items: center; gap: 0.5rem;">
+              <span>🧠</span>
+              <h3>RAM</h3>
+            </div>
+            <p class="metric-value" id="ramValue">6.8 GB</p>
           </div>
-          <p class="metric-value">6.8 GB</p>
-        </div>
-      </section>
+        </section>
 
-      <!-- Sección de Gráfica -->
-      <section class="chart-section">
-        <h2>Rendimiento</h2>
-        <div class="chart-placeholder">[ Gráfica ]</div>
-      </section>
+        <!-- Sección de Gráfica Interactiva -->
+        <section class="chart-section" style="margin-top: 1rem;">
+          <h2>Rendimiento en Tiempo Real</h2>
+          <div class="chart-container">
+            <canvas id="performanceChart"></canvas>
+          </div>
+        </section>
+      </div>
+
+      <!-- SECCIÓN 2: SERVIDORES -->
+      <div id="section-servidores" class="spa-section">
+        <section class="card">
+          <h2>Estado de Servidores Cloud</h2>
+          <div class="server-list" style="margin-top: 1rem; display: flex; flex-direction: column; gap: 0.75rem;">
+            <div class="server-item" style="display: flex; justify-content: space-between; padding: 0.75rem; background: #f8fafc; border-radius: 6px;">
+              <span><strong>US-East (Servidor Web 01)</strong></span>
+              <span style="color: #16a34a; font-weight: bold;">● En línea</span>
+            </div>
+            <div class="server-item" style="display: flex; justify-content: space-between; padding: 0.75rem; background: #f8fafc; border-radius: 6px;">
+              <span><strong>US-West (Base de Datos)</strong></span>
+              <span style="color: #16a34a; font-weight: bold;">● En línea</span>
+            </div>
+            <div class="server-item" style="display: flex; justify-content: space-between; padding: 0.75rem; background: #f8fafc; border-radius: 6px;">
+              <span><strong>EU-Central (Backup Storage)</strong></span>
+              <span style="color: #ea580c; font-weight: bold;">● Mantenimiento</span>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- SECCIÓN 3: MÉTRICAS DETALLADAS -->
+      <div id="section-metricas" class="spa-section">
+        <section class="card">
+          <h2>Métricas Históricas</h2>
+          <p style="margin-top: 0.5rem; color: #64748b;">Resumen general de peticiones y latencia media de la red.</p>
+          <div class="metrics-grid" style="margin-top: 1rem;">
+            <div class="card" style="background: #f1f5f9;">
+              <h3>Peticiones / seg</h3>
+              <p class="metric-value" style="color: #0d9488;">1,240 req/s</p>
+            </div>
+            <div class="card" style="background: #f1f5f9;">
+              <h3>Latencia Promedio</h3>
+              <p class="metric-value" style="color: #0d9488;">18 ms</p>
+            </div>
+          </div>
+        </section>
+      </div>
 
     </main>
 
   </div>
 
-  <!-- JavaScript al final para dar interactividad -->
   <script src="script.js"></script>
 </body>
 </html>
