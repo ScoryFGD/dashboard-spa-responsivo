@@ -10,7 +10,7 @@ body {
   background-color: #f4f6f9;
 }
 
-/* Sidebar */
+/* Sidebar (Oculta por defecto en móvil a la izquierda) */
 .sidebar {
   position: fixed;
   top: 0;
@@ -24,6 +24,7 @@ body {
   z-index: 1000;
 }
 
+/* Clase que activa JavaScript para mostrar la sidebar en móvil */
 .sidebar.active {
   left: 0;
 }
@@ -102,7 +103,7 @@ body {
   color: #64748b;
 }
 
-/* Vista de escritorio */
+/* Vista de escritorio (Media Query a partir de 768px) */
 @media (min-width: 768px) {
   body {
     display: flex;
